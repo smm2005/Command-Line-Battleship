@@ -24,7 +24,7 @@ hence the name of the program running on the command line as of this moment.
 ![Screenshot 2024-05-29 142908](https://github.com/smm2005/Command-Line-Battleship/assets/70491113/d414b868-93e0-4448-a9ce-8e465eaf152e)
 
 
-How does this game work (**READ CAREFULLY**):
+**HOW DOES THIS GAME WORK?** (**READ CAREFULLY**):
 
 - You play against the COMPUTER. The computer selects 5 random places to position 5 different ships.
 The ships for both the player and the computer will be randomly assigned.
