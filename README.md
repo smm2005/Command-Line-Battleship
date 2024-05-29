@@ -60,8 +60,9 @@ ZERO indexed.
 
 ![image](https://github.com/smm2005/Command-Line-Battleship/assets/70491113/22fb99d5-4a73-434d-b52e-58e59c881bd3)
 
-- What if you enter a negative number or a number that exceeds the matrix length and matrix width limits? There's always
-Math.abs(...) and the modulo operator.
+- You can NOT launch another missile at a previously targeted coordinate. Otherwise...
+
+![image](https://github.com/smm2005/Command-Line-Battleship/assets/70491113/445b7ae4-6694-444e-963d-a6a7632bf837)
 
 - Invalid inputs besides the above mentioned will return an error message where the user will be prompted to enter new 
 launch coordinates.
