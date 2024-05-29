@@ -1,0 +1,88 @@
+
+
+----------------- BATTLESHIP -----------------
+
+Welcome to the Battleship Game Played On The Command Line!
+
+This game is made 100% with Java and is based almost entirely off of the Battleship board game
+hence the name of the program running on the command line as of this moment.
+
+How does this game work (**READ CAREFULLY**):
+
+- You play against the COMPUTER. The computer selects 5 random places to position 5 different ships.
+The ships for both the player and the computer will be randomly assigned.
+
+- The 5 ships and the spaces they take up on the board are as follows:
+	Destroyer: 2 spaces
+	Submarine: 3 spaces
+	Cruiser: 3 spaces
+	Battleship: 4 spaces
+	Carrier: 5 spaces
+In total, 17 spaces of the board will be taken up by the ships.
+
+- SHIPS CANNOT OVERLAP EACH OTHER. So 17 spaces WILL be filled up in the board
+	
+- The board will look like the following for whenever the 5 ships are placed in 5 different places
+
+[O, O, O, O, O, O, O, O, O, O]
+[O, %1$sS, S, S, S%2$s, O, O, O, O, O]
+[O, O, O, O, O, O, O, O, O, O]
+[O, O, O, O, O, O, O, O, O, O]
+[O, O, %1$sS%2$s, O, O, O, O, O, O, O]
+[O, O, %1$sS%2$s, O, O, O, O, O, O, O]
+[O, O, %1$sS%2$s, O, O, O, O, O, O, O]
+[O, O, %1$sS%2$s, O, %1$sS, S, S, S, S%2$s, O]
+[O, O, %1$sS%2$s, O, O, O, O, O, O, O]
+[%1$sS, S, S%2$s, O, O, O, O, O, O, O]
+
+As you can see, the ships denoted by "S" have a blue colour. "O" denotes an empty space which is indicated in white.
+
+- One player can NOT see the other player's board. If players were to see boards they see their own board.
+
+- Players will also have a secondary board which will track any hits or misses they made to the computer's ships.
+
+- Now it's getting fun; players will also be prompted to LAUNCH a "missile" to another spot in the computer's board 
+This prompt will consist of a row number and a column number indicated as "{row} {column}" where the numbers will be
+ZERO indexed.
+
+- What if you enter a negative number or a number that exceeds the matrix length and matrix width limits? There's always
+Math.abs(...) and the modulo operator.
+
+- Invalid inputs besides the above mentioned will return an error message where the user will be prompted to enter new 
+launch coordinates.
+
+- Whenever a missile is launched, it will either hit one part of the ship (denoted in yellow by "*")
+
+[O, O, O, O, O, O, O, O, O, O]
+[O, %1$sS, S, %3$s*%2$s%1$s, S%2$s, O, O, O, O, O]
+[O, O, O, O, O, O, O, O, O, O]
+[O, O, O, O, O, O, O, O, O, O]
+[O, O, %1$sS%2$s, O, O, O, O, O, O, O]
+[O, O, %1$sS%2$s, O, O, O, O, O, O, O]
+[O, O, %1$sS%2$s, O, O, O, O, O, O, O]
+[O, O, %1$sS%2$s, O, %1$sS, S, S, S, S%2$s, O]
+[O, O, %1$sS%2$s, O, O, O, O, O, O, O]
+[%1$sS, S, S%2$s, O, O, O, O, O, O, O]
+
+ or miss (denoted in green by "M")
+
+[O, O, O, O, O, O, O, O, O, O]
+[O, %1$sS, S, S, S%2$s, O, O, O, O, O]
+[O, O, O, O, O, O, O, O, O, O]
+[O, O, O, O, O, O, O, O, O, O]
+[O, O, %1$sS%2$s, O, O, %3$sM%2$s, O, O, O, O]
+[O, O, %1$sS%2$s, O, O, O, O, O, O, O]
+[O, O, %1$sS%2$s, O, O, O, O, O, O, O]
+[O, O, %1$sS%2$s, O, %1$sS, S, S, S, S%2$s, O]
+[O, O, %1$sS%2$s, O, O, O, O, O, O, O]
+[%1$sS, S, S%2$s, O, O, O, O, O, O, O]
+
+- If all parts of the specific ship are hit, then the command line will print out "YOU SUNK MY" followed by the ships name. This indicates that the ship positioned by the computer has sunk since all missiles hit each and every single part of the ship
+
+- However if all parts of the specific ship for YOUR board are hit, the command line will print out "COMPUTER SUNK YOUR" followed by the ships name. This indicates that the ship positioned by the player has sunk since all missiles hit each and every single part of the ship
+
+- There are no limits as to how many "missiles" are present for both the player and the computer.
+
+- The game ends when the player sinks all of the computers ships or vice versa.
+
+----------------- END -----------------
